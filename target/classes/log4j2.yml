@@ -1,0 +1,123 @@
+Configuration:
+ packages: "com.pavelchak.SMS"
+ name: Log4j2_Config
+ properties:
+  property:
+   name: log-path
+   value: logs
+
+  Appenders:
+    Console:
+      name: Console_Appender
+      PatternLayout:
+       Pattern: "%highlight{%-5level}{FATAL=bg_red}	%style{%date{yyyy-MM-dd 
+        HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
+
+  Loggers:
+    Logger:
+     - name: com.pavelchak.Application
+       level: all
+       AppenderRef:
+       - ref: Console_Appender
+         level: trace
+
+appenders:
+   File:
+    name: rootLogFile
+    fileName: ${log-path}/rootFile.log
+    PatternLayout:
+    Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
+               %xEx{short}%n"
+   Loggers:
+    Root:
+    level: all
+    AppenderRef:
+    - ref: rootLogFile
+      level: debug
+
+    appenders:
+   RollingFile:
+   name: rolFile1
+   fileName: ${log-path}/rollingFile1.log
+   filePattern: ${log-path}/archive/rolFile1.log.%d{yyyy-MM-dd-hh-mm}.gz
+   PatternLayout:
+   Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
+              %xEx{short}%n"
+   Policies:
+      SizeBasedTriggeringPolicy:
+        size: 10 Mb
+
+   appenders:
+    RollingFile:
+     name: rolFile3
+     fileName: ${log-path}/rollingFile3.log
+     filePattern: ${log-path}/archive/rolFile3-%d{yy-MM-dd}.log
+     PatternLayout:
+      Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
+                 %xEx{short}%n"
+     Policies:
+     TimeBasedTriggeringPolicy:
+       interval: 1
+       modulate: true
+
+     appenders:
+RollingFile:
+  name: rolFile4
+  fileName: ${log-path}/rollingFile4.log
+  filePattern: ${log-path}/archive/rolFile4_old.log
+  PatternLayout:
+   Pattern:  "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
+  CronTriggeringPolicy:
+       schedule: "0 15 10 ? * *"
+       evaluateOnStartup: true
+  DefaultRolloverStrategy:
+  max: 1
+
+  appenders:
+   SMTP:
+    Name: MailAppender
+    subject: "Error Log"
+    to: "bilyj@ukr.net"
+    from: "apavelchak@gmail.com"
+    smtpHost: "smtp.gmail.com"
+    smtpPort: 465
+    smtpProtocol: smtps
+    smtpUsername: "apavelchak@gmail.com"
+    smtpPassword: "xxxxxxxx"
+    bufferSize: 512
+    HTMLLayout:
+     charset: "UTF-8"
+    title: "Logs from Pavelchak project 5_Log4Jf"
+
+   appenders:
+    name: logFileFilter4
+    fileName: ${log-path}/fileFilter4.log
+    Filters:
+      ThresholdFilter:
+       level: error
+       onMatch: DENY
+       onMismatch: NEUTRAL
+
+    Loggers:
+    Logger:
+    - name: com.pavelchak.People.Man
+      level: all
+      AppenderRef:
+    - ref: logFileFilter4
+      level: all
+
+    appenders:
+     name: logFileFilter4
+     fileName: ${log-path}/fileFilter4.log
+    PatternLayout:
+    Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
+    %xEx{short}%n"
+  Filters:
+    ThresholdFilter:
+      level: warn
+      onMatch: NEUTRAL
+      onMismatch: DENY
+
+
+
+
