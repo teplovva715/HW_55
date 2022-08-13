@@ -46,3 +46,21 @@
 [WARN ] 2022-08-13 17:00:45.612 Main:11 - This is a warn message
 [ERROR] 2022-08-13 17:00:45.613 Main:12 - This is an error message
 [FATAL] 2022-08-13 17:00:45.613 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 18:10:21.863 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 18:10:21.868 Main:9 - This is a debug message
+[INFO ] 2022-08-13 18:10:21.868 Main:10 - This is an info message
+[WARN ] 2022-08-13 18:10:21.869 Main:11 - This is a warn message
+[ERROR] 2022-08-13 18:10:21.869 Main:12 - This is an error message
+[FATAL] 2022-08-13 18:10:21.870 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 18:14:56.247 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 18:14:56.250 Main:9 - This is a debug message
+[INFO ] 2022-08-13 18:14:56.251 Main:10 - This is an info message
+[WARN ] 2022-08-13 18:14:56.251 Main:11 - This is a warn message
+[ERROR] 2022-08-13 18:14:56.252 Main:12 - This is an error message
+[FATAL] 2022-08-13 18:14:56.252 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 18:15:41.209 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 18:15:41.213 Main:9 - This is a debug message
+[INFO ] 2022-08-13 18:15:41.214 Main:10 - This is an info message
+[WARN ] 2022-08-13 18:15:41.214 Main:11 - This is a warn message
+[ERROR] 2022-08-13 18:15:41.215 Main:12 - This is an error message
+[FATAL] 2022-08-13 18:15:41.215 Main:13 - This is a fatal message

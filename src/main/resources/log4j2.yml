@@ -67,10 +67,5 @@ Configuration:
             ref: rolFileDailyNew
             level: trace
           -
-            ref: logFileFilterHigherWarn
-            level: warn
-          -
-            ref: logFileFilterOnlyWarn
-            level: warn
-
-
+            ref: rolFile1400
+            level: trace
