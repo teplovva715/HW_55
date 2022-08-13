@@ -1,0 +1,32 @@
+[INFO ] 2022-08-13 16:28:38.914 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 16:28:38.915 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 16:28:38.916 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 16:28:38.916 [main] Main:13 - This is a fatal message
+[INFO ] 2022-08-13 16:29:53.876 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 16:29:53.877 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 16:29:53.878 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 16:29:53.879 [main] Main:13 - This is a fatal message
+[INFO ] 2022-08-13 16:32:33.581 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 16:32:33.582 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 16:32:33.583 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 16:32:33.583 [main] Main:13 - This is a fatal message
+[INFO ] 2022-08-13 16:46:08.171 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 16:46:08.171 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 16:46:08.172 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 16:46:08.173 [main] Main:13 - This is a fatal message
+[INFO ] 2022-08-13 16:47:09.502 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 16:47:09.503 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 16:47:09.503 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 16:47:09.504 [main] Main:13 - This is a fatal message
+[INFO ] 2022-08-13 16:54:47.627 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 16:54:47.628 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 16:54:47.628 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 16:54:47.628 [main] Main:13 - This is a fatal message
+[INFO ] 2022-08-13 16:59:59.846 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 16:59:59.847 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 16:59:59.847 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 16:59:59.848 [main] Main:13 - This is a fatal message
+[INFO ] 2022-08-13 17:00:45.611 [main] Main:10 - This is an info message
+[WARN ] 2022-08-13 17:00:45.612 [main] Main:11 - This is a warn message
+[ERROR] 2022-08-13 17:00:45.613 [main] Main:12 - This is an error message
+[FATAL] 2022-08-13 17:00:45.613 [main] Main:13 - This is a fatal message

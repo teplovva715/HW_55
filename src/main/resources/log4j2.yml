@@ -6,46 +6,19 @@ Configuration:
       value: logs
 
   Appenders:
-
     Console:
       name: Console_Appender
       PatternLayout:
-        Pattern: "%highlight{%-5level}{FATAL=bg_red} %style{%date{yyyy-MM-dd HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
-      #in the console will be recorded only “INFO”
+        Pattern: "%highlight{%-5level}{FATAL=bg_red}	%style{%date{yyyy-MM-dd  HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
+
       Filters:
         ThresholdFilter:
-          level: error
+          level: all
           onMatch: DENY
           onMismatch: NEUTRAL
 
-    File:
-      - #file will not be overwritten
-        name: rootLogFile
-        fileName: ${log-path}/rootFile.log
-        PatternLayout:
-          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
-
-      - #every day log will be written to a new file
-        name: rootLogFileDaily
-        fileName: ${log-path}/rootFileDaily-${date:yyyy-MM-dd}.log
-        PatternLayout:
-          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %class{1}:%L - %msg%xEx{short}%n"
-
-      - #all levels higher than “WARN” will be saved in the file
-        name: logFileFilterHigherWarn
-        fileName: ${log-path}/fileFilterHigherWarn.log
-
-      - #in the file will be recorded only “WARN”
-        name: logFileFilterOnlyWarn
-        fileName: ${log-path}/fileFilterOnlyWarn.log
-        Filters:
-          ThresholdFilter:
-            level: error
-            onMatch: DENY
-            onMismatch: NEUTRAL
-
     RollingFile:
-      - #file will be overwritten after reaching the size of 1MB
+      - #file will be overwritten after reaching the size of 10MB
         name: rolFile1MB
         fileName: ${log-path}/rollingFile1MB.log
         filePattern: "logs/archive/rolFile1.log.%d{yyyy-MM-dd}.gz"
@@ -53,7 +26,7 @@ Configuration:
           Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
         Policies:
           SizeBasedTriggeringPolicy:
-            size: 1MB
+            size: 10MB
 
       - #every day log will be written to a new file
         name: rolFileDailyNew
@@ -79,16 +52,9 @@ Configuration:
           max: 1
 
   Loggers:
-    Root:
-      level: all
-      AppenderRef:
-        - ref: rootLogFile
-          level: debug
-
     Logger:
       -
         name: org.example.Main
-        additivity: false
         level: all
         AppenderRef:
           -
@@ -100,12 +66,6 @@ Configuration:
           -
             ref: rolFileDailyNew
             level: trace
-          -
-            ref: rolFile1400
-            level: trace
-          -
-            ref: rootLogFileDaily
-            level: info
           -
             ref: logFileFilterHigherWarn
             level: warn
