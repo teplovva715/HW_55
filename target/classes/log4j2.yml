@@ -87,7 +87,7 @@ Configuration:
 
     Logger:
       -
-        name: com.ostapiuk.Application
+        name: org.example.Main
         additivity: false
         level: all
         AppenderRef:
