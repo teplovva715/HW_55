@@ -1,123 +1,116 @@
 Configuration:
- packages: "com.pavelchak.SMS"
- name: Log4j2_Config
- properties:
-  property:
-   name: log-path
-   value: logs
+  name: Log4j2_Config
+  Properties:
+    Property:
+      name: log-path
+      value: logs
 
   Appenders:
+
     Console:
       name: Console_Appender
       PatternLayout:
-       Pattern: "%highlight{%-5level}{FATAL=bg_red}	%style{%date{yyyy-MM-dd 
-        HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
+        Pattern: "%highlight{%-5level}{FATAL=bg_red} %style{%date{yyyy-MM-dd HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
+      #in the console will be recorded only “INFO”
+      Filters:
+        ThresholdFilter:
+          level: error
+          onMatch: DENY
+          onMismatch: NEUTRAL
+
+    File:
+      - #file will not be overwritten
+        name: rootLogFile
+        fileName: ${log-path}/rootFile.log
+        PatternLayout:
+          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
+
+      - #every day log will be written to a new file
+        name: rootLogFileDaily
+        fileName: ${log-path}/rootFileDaily-${date:yyyy-MM-dd}.log
+        PatternLayout:
+          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %class{1}:%L - %msg%xEx{short}%n"
+
+      - #all levels higher than “WARN” will be saved in the file
+        name: logFileFilterHigherWarn
+        fileName: ${log-path}/fileFilterHigherWarn.log
+
+      - #in the file will be recorded only “WARN”
+        name: logFileFilterOnlyWarn
+        fileName: ${log-path}/fileFilterOnlyWarn.log
+        Filters:
+          ThresholdFilter:
+            level: error
+            onMatch: DENY
+            onMismatch: NEUTRAL
+
+    RollingFile:
+      - #file will be overwritten after reaching the size of 1MB
+        name: rolFile1MB
+        fileName: ${log-path}/rollingFile1MB.log
+        filePattern: "logs/archive/rolFile1.log.%d{yyyy-MM-dd}.gz"
+        PatternLayout:
+          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
+        Policies:
+          SizeBasedTriggeringPolicy:
+            size: 1MB
+
+      - #every day log will be written to a new file
+        name: rolFileDailyNew
+        fileName: ${log-path}/rollingFileDailyNew.log
+        filePattern: ${log-path}/archive/rolFile3-%d{yy-MM-dd}.log
+        PatternLayout:
+          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+
+      - #file will be overwritten every day at 14:00
+        name: rolFile1400
+        fileName: ${log-path}/rollingFile1400.log
+        filePattern: ${log-path}/archive/rolFile4_old.log
+        PatternLayout:
+          Pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
+        CronTriggeringPolicy:
+          schedule: "0 0 14 ? * *"
+          evaluateOnStartup: true
+        DefaultRolloverStrategy:
+          max: 1
 
   Loggers:
-    Logger:
-     - name: com.pavelchak.Application
-       level: all
-       AppenderRef:
-       - ref: Console_Appender
-         level: trace
-
-appenders:
-   File:
-    name: rootLogFile
-    fileName: ${log-path}/rootFile.log
-    PatternLayout:
-    Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
-               %xEx{short}%n"
-   Loggers:
     Root:
-    level: all
-    AppenderRef:
-    - ref: rootLogFile
-      level: debug
-
-    appenders:
-   RollingFile:
-   name: rolFile1
-   fileName: ${log-path}/rollingFile1.log
-   filePattern: ${log-path}/archive/rolFile1.log.%d{yyyy-MM-dd-hh-mm}.gz
-   PatternLayout:
-   Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
-              %xEx{short}%n"
-   Policies:
-      SizeBasedTriggeringPolicy:
-        size: 10 Mb
-
-   appenders:
-    RollingFile:
-     name: rolFile3
-     fileName: ${log-path}/rollingFile3.log
-     filePattern: ${log-path}/archive/rolFile3-%d{yy-MM-dd}.log
-     PatternLayout:
-      Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
-                 %xEx{short}%n"
-     Policies:
-     TimeBasedTriggeringPolicy:
-       interval: 1
-       modulate: true
-
-     appenders:
-RollingFile:
-  name: rolFile4
-  fileName: ${log-path}/rollingFile4.log
-  filePattern: ${log-path}/archive/rolFile4_old.log
-  PatternLayout:
-   Pattern:  "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg%xEx{short}%n"
-  CronTriggeringPolicy:
-       schedule: "0 15 10 ? * *"
-       evaluateOnStartup: true
-  DefaultRolloverStrategy:
-  max: 1
-
-  appenders:
-   SMTP:
-    Name: MailAppender
-    subject: "Error Log"
-    to: "bilyj@ukr.net"
-    from: "apavelchak@gmail.com"
-    smtpHost: "smtp.gmail.com"
-    smtpPort: 465
-    smtpProtocol: smtps
-    smtpUsername: "apavelchak@gmail.com"
-    smtpPassword: "xxxxxxxx"
-    bufferSize: 512
-    HTMLLayout:
-     charset: "UTF-8"
-    title: "Logs from Pavelchak project 5_Log4Jf"
-
-   appenders:
-    name: logFileFilter4
-    fileName: ${log-path}/fileFilter4.log
-    Filters:
-      ThresholdFilter:
-       level: error
-       onMatch: DENY
-       onMismatch: NEUTRAL
-
-    Loggers:
-    Logger:
-    - name: com.pavelchak.People.Man
       level: all
       AppenderRef:
-    - ref: logFileFilter4
-      level: all
+        - ref: rootLogFile
+          level: debug
 
-    appenders:
-     name: logFileFilter4
-     fileName: ${log-path}/fileFilter4.log
-    PatternLayout:
-    Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg
-    %xEx{short}%n"
-  Filters:
-    ThresholdFilter:
-      level: warn
-      onMatch: NEUTRAL
-      onMismatch: DENY
-
-
+    Logger:
+      -
+        name: com.ostapiuk.Application
+        additivity: false
+        level: all
+        AppenderRef:
+          -
+            ref: Console_Appender
+            level: info
+          -
+            ref: rolFile1MB
+            level: trace
+          -
+            ref: rolFileDailyNew
+            level: trace
+          -
+            ref: rolFile1400
+            level: trace
+          -
+            ref: rootLogFileDaily
+            level: info
+          -
+            ref: logFileFilterHigherWarn
+            level: warn
+          -
+            ref: logFileFilterOnlyWarn
+            level: warn
 
 
