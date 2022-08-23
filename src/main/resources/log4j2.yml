@@ -1,4 +1,5 @@
 Configuration:
+  packages: org.example.Main
   name: Log4j2_Config
   Properties:
     Property:

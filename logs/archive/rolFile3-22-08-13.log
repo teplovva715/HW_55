@@ -46,12 +46,60 @@
 [WARN ] 2022-08-13 17:00:45.612 Main:11 - This is a warn message
 [ERROR] 2022-08-13 17:00:45.613 Main:12 - This is an error message
 [FATAL] 2022-08-13 17:00:45.613 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 17:48:48.408 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 17:48:48.411 Main:9 - This is a debug message
+[INFO ] 2022-08-13 17:48:48.412 Main:10 - This is an info message
+[WARN ] 2022-08-13 17:48:48.412 Main:11 - This is a warn message
+[ERROR] 2022-08-13 17:48:48.412 Main:12 - This is an error message
+[FATAL] 2022-08-13 17:48:48.413 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 17:49:35.139 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 17:49:35.142 Main:9 - This is a debug message
+[INFO ] 2022-08-13 17:49:35.143 Main:10 - This is an info message
+[WARN ] 2022-08-13 17:49:35.143 Main:11 - This is a warn message
+[ERROR] 2022-08-13 17:49:35.143 Main:12 - This is an error message
+[FATAL] 2022-08-13 17:49:35.144 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 17:50:14.385 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 17:50:14.388 Main:9 - This is a debug message
+[INFO ] 2022-08-13 17:50:14.389 Main:10 - This is an info message
+[WARN ] 2022-08-13 17:50:14.389 Main:11 - This is a warn message
+[ERROR] 2022-08-13 17:50:14.389 Main:12 - This is an error message
+[FATAL] 2022-08-13 17:50:14.389 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 17:54:18.507 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 17:54:18.510 Main:9 - This is a debug message
+[INFO ] 2022-08-13 17:54:18.511 Main:10 - This is an info message
+[WARN ] 2022-08-13 17:54:18.511 Main:11 - This is a warn message
+[ERROR] 2022-08-13 17:54:18.512 Main:12 - This is an error message
+[FATAL] 2022-08-13 17:54:18.512 Main:13 - This is a fatal message
 [TRACE] 2022-08-13 18:10:21.863 Main:8 - This is a trace message
 [DEBUG] 2022-08-13 18:10:21.868 Main:9 - This is a debug message
 [INFO ] 2022-08-13 18:10:21.868 Main:10 - This is an info message
 [WARN ] 2022-08-13 18:10:21.869 Main:11 - This is a warn message
 [ERROR] 2022-08-13 18:10:21.869 Main:12 - This is an error message
 [FATAL] 2022-08-13 18:10:21.870 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 18:10:58.924 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 18:10:58.927 Main:9 - This is a debug message
+[INFO ] 2022-08-13 18:10:58.927 Main:10 - This is an info message
+[WARN ] 2022-08-13 18:10:58.928 Main:11 - This is a warn message
+[ERROR] 2022-08-13 18:10:58.928 Main:12 - This is an error message
+[FATAL] 2022-08-13 18:10:58.928 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 18:11:19.521 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 18:11:19.525 Main:9 - This is a debug message
+[INFO ] 2022-08-13 18:11:19.525 Main:10 - This is an info message
+[WARN ] 2022-08-13 18:11:19.525 Main:11 - This is a warn message
+[ERROR] 2022-08-13 18:11:19.526 Main:12 - This is an error message
+[FATAL] 2022-08-13 18:11:19.526 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 18:11:55.347 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 18:11:55.350 Main:9 - This is a debug message
+[INFO ] 2022-08-13 18:11:55.351 Main:10 - This is an info message
+[WARN ] 2022-08-13 18:11:55.351 Main:11 - This is a warn message
+[ERROR] 2022-08-13 18:11:55.351 Main:12 - This is an error message
+[FATAL] 2022-08-13 18:11:55.352 Main:13 - This is a fatal message
+[TRACE] 2022-08-13 18:12:31.175 Main:8 - This is a trace message
+[DEBUG] 2022-08-13 18:12:31.179 Main:9 - This is a debug message
+[INFO ] 2022-08-13 18:12:31.179 Main:10 - This is an info message
+[WARN ] 2022-08-13 18:12:31.180 Main:11 - This is a warn message
+[ERROR] 2022-08-13 18:12:31.180 Main:12 - This is an error message
+[FATAL] 2022-08-13 18:12:31.180 Main:13 - This is a fatal message
 [TRACE] 2022-08-13 18:14:56.247 Main:8 - This is a trace message
 [DEBUG] 2022-08-13 18:14:56.250 Main:9 - This is a debug message
 [INFO ] 2022-08-13 18:14:56.251 Main:10 - This is an info message
@@ -196,45 +244,3 @@
 [WARN ] 2022-08-13 23:58:33.076 Main:11 - This is a warn message
 [ERROR] 2022-08-13 23:58:33.077 Main:12 - This is an error message
 [FATAL] 2022-08-13 23:58:33.078 Main:13 - This is a fatal message
-[TRACE] 2022-08-14 00:02:04.864 Main:8 - This is a trace message
-[DEBUG] 2022-08-14 00:02:04.872 Main:9 - This is a debug message
-[INFO ] 2022-08-14 00:02:04.873 Main:10 - This is an info message
-[WARN ] 2022-08-14 00:02:04.873 Main:11 - This is a warn message
-[ERROR] 2022-08-14 00:02:04.874 Main:12 - This is an error message
-[FATAL] 2022-08-14 00:02:04.874 Main:13 - This is a fatal message
-[TRACE] 2022-08-14 00:21:00.144 Main:8 - This is a trace message
-[DEBUG] 2022-08-14 00:21:00.147 Main:9 - This is a debug message
-[INFO ] 2022-08-14 00:21:00.147 Main:10 - This is an info message
-[WARN ] 2022-08-14 00:21:00.148 Main:11 - This is a warn message
-[ERROR] 2022-08-14 00:21:00.148 Main:12 - This is an error message
-[FATAL] 2022-08-14 00:21:00.149 Main:13 - This is a fatal message
-[TRACE] 2022-08-14 00:23:04.874 Main:8 - This is a trace message
-[DEBUG] 2022-08-14 00:23:04.877 Main:9 - This is a debug message
-[INFO ] 2022-08-14 00:23:04.877 Main:10 - This is an info message
-[WARN ] 2022-08-14 00:23:04.878 Main:11 - This is a warn message
-[ERROR] 2022-08-14 00:23:04.878 Main:12 - This is an error message
-[FATAL] 2022-08-14 00:23:04.878 Main:13 - This is a fatal message
-[TRACE] 2022-08-14 00:26:16.720 Main:8 - This is a trace message
-[DEBUG] 2022-08-14 00:26:16.724 Main:9 - This is a debug message
-[INFO ] 2022-08-14 00:26:16.725 Main:10 - This is an info message
-[WARN ] 2022-08-14 00:26:16.725 Main:11 - This is a warn message
-[ERROR] 2022-08-14 00:26:16.725 Main:12 - This is an error message
-[FATAL] 2022-08-14 00:26:16.726 Main:13 - This is a fatal message
-[TRACE] 2022-08-14 00:27:18.293 Main:8 - This is a trace message
-[DEBUG] 2022-08-14 00:27:18.296 Main:9 - This is a debug message
-[INFO ] 2022-08-14 00:27:18.296 Main:10 - This is an info message
-[WARN ] 2022-08-14 00:27:18.297 Main:11 - This is a warn message
-[ERROR] 2022-08-14 00:27:18.297 Main:12 - This is an error message
-[FATAL] 2022-08-14 00:27:18.297 Main:13 - This is a fatal message
-[TRACE] 2022-08-14 00:35:18.680 Main:8 - This is a trace message
-[DEBUG] 2022-08-14 00:35:18.684 Main:9 - This is a debug message
-[INFO ] 2022-08-14 00:35:18.684 Main:10 - This is an info message
-[WARN ] 2022-08-14 00:35:18.684 Main:11 - This is a warn message
-[ERROR] 2022-08-14 00:35:18.685 Main:12 - This is an error message
-[FATAL] 2022-08-14 00:35:18.685 Main:13 - This is a fatal message
-[TRACE] 2022-08-14 00:38:14.683 Main:8 - This is a trace message
-[DEBUG] 2022-08-14 00:38:14.687 Main:9 - This is a debug message
-[INFO ] 2022-08-14 00:38:14.687 Main:10 - This is an info message
-[WARN ] 2022-08-14 00:38:14.687 Main:11 - This is a warn message
-[ERROR] 2022-08-14 00:38:14.688 Main:12 - This is an error message
-[FATAL] 2022-08-14 00:38:14.688 Main:13 - This is a fatal message
